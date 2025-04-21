@@ -18,9 +18,9 @@ app.get("/about-us", (req, res) => {
     res.redirect("/about");
 })
 
-// app.use((req, res) => {
-//     res.status(404).sendFile("./views/404.html", {root: __dirname});
-// })
+app.use((req, res) => {
+    res.status(404).sendFile("./views/404.html", {root: __dirname});
+})
 
 app.listen(port, () => {
     console.log(`Server is listening on port ${port}`);
